@@ -1,0 +1,42 @@
+body{
+    background-color: white;
+    padding: 1cm;
+    
+}
+
+.main-container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:350mm;
+    height:200mm;
+    background-color:#F7F6F1;
+    border-style: solid;
+    border-width: 3mm;
+    padding-top: 5mm;
+}
+
+.main-header{
+    background-color:#FC3D3D;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-style: solid;
+    border-width: 3mm;
+    width:350mm;
+}
+
+.pokemon-slot{
+    border-style: solid;
+    border-width: 1mm;
+    padding: 10mm;
+    background-color: rgb(169, 177, 174);
+
+
+}
+
+.empty-pokemon-slot{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
