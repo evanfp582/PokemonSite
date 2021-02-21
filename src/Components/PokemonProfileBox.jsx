@@ -1,4 +1,3 @@
-import PokemonSlot from "./PokemonSlot";
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -15,40 +14,33 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NestedGrid() {
+export default function PokemonProfileBox() {
   const classes = useStyles();
-// const array=[1,2,3,4]
 
   function FormRow() {
     return (
-      <>
-      {/* {array.map((item) => {
-        return(<div>
-          <h1>{item}</h1>
-        </div>)
-      } )} */}
+      <React.Fragment>
         <Grid item xs={6}>
-          <Paper className={classes.paper}><PokemonSlot /></Paper>
+          <Paper className={classes.paper}>item</Paper>
         </Grid>
+        
         <Grid item xs={6}>
-          <Paper className={classes.paper}><PokemonSlot /></Paper>
+          <Paper className={classes.paper}>item</Paper>
+          <Paper className={classes.paper}>item</Paper>
         </Grid>
-      </>
+      </React.Fragment>
     );
   }
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={6}>
+      <Grid container spacing={1}>
         <Grid container item xs={12} spacing={3}>
           <FormRow />
+          
         </Grid>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow />
-        </Grid>
-        <Grid container item xs={12} spacing={3}>
-          <FormRow />
-        </Grid>
+        
+        
       </Grid>
     </div>
   );

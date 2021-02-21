@@ -40,3 +40,9 @@ body{
     margin-right: auto;
     text-align: center;
 }
+
+.filled-pokemon-slot{
+    height: 80px;
+    text-align: left;
+    font-size: 10px;
+}
