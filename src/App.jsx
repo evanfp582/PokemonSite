@@ -2,7 +2,7 @@ import React from "react"
 import Container from '@material-ui/core/Container';
 import Header from "./Components/Header"
 import FormRow from "./Components/FormRow"
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+//import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import PokemonBio from "./Components/PokemonBio"
 
