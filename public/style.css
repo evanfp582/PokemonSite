@@ -1,8 +1,23 @@
+
+
 body{
     background-color: white;
     padding: 1cm;
     
 }
+
+@font-face {
+    font-family: 'PokemonFont', monospace;
+    src: url(../font/Pokemon\ Solid.ttf); /* IE9 Compat Modes */
+    src: url(../font/Pokemon\ Solid.ttf) format('embedded-opentype'), /* IE6-IE8 */
+         url(../font/Pokemon\ Solid.ttf) format('woff2'), /* Super Modern Browsers */
+         url(../font/Pokemon\ Solid.ttf) format('woff'), /* Pretty Modern Browsers */
+         url(../font/Pokemon\ Solid.ttf)  format('truetype'), /* Safari, Android, iOS */
+         url(../font/Pokemon\ Solid.ttf) format('svg'); /* Legacy iOS */
+  }
+
+
+
 
 .main-container{
     display: block;
@@ -14,6 +29,7 @@ body{
     border-style: solid;
     border-width: 3mm;
     padding-top: 5mm;
+    font-family:'PokemonFont',monospace;
 }
 
 .main-header{
@@ -24,25 +40,55 @@ body{
     border-style: solid;
     border-width: 3mm;
     width:350mm;
+    font-family:'PokemonFont',monospace;
 }
 
 .pokemon-slot{
     border-style: solid;
     border-width: 1mm;
     padding: 10mm;
-    background-color: rgb(169, 177, 174);
-
-
+    background-color: rgb(240, 63, 50);
+    font-family:'PokemonFont',monospace;
+}
+.pokemon-slot button{
+    background-color: black;
+    color: #F7F6F1;
+    font-family:'PokemonFont',monospace;
 }
 
 .empty-pokemon-slot{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    font-family:'PokemonFont',monospace;
 }
 
 .filled-pokemon-slot{
-    height: 80px;
+    /* height: 80px; */
     text-align: left;
-    font-size: 10px;
+    font-size: 15px;
+    margin-left: auto;
+    font-family:'PokemonFont',monospace;
+}
+
+
+.pokemon-images{
+    /* padding: 1mm; */
+    text-align:center;
+}
+.pokemon-images img{
+    padding-bottom: 0mm;
+}
+
+.pokemon-images-box{
+    width: 10mm;
+}
+
+.health{
+    text-align: left;
+    font-family:'PokemonFont',monospace;
+}
+.name{
+    text-align: center;
+    font-family:'PokemonFont',monospace;
 }

@@ -8,25 +8,40 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(1),
-    textAlign: 'center',
+    padding: "15px",
+    // textAlign: 'center',
     color: theme.palette.text.secondary,
+
   },
 }));
 
-export default function PokemonProfileBox() {
+export default function PokemonProfileBox(props) {
   const classes = useStyles();
 
   function FormRow() {
+    
+    let string1="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+    let string2=props.id
+    let string3=".png"
+    let finalString = string1.concat(string2,string3)
+
+    const capitalize = (s) => {
+        if (typeof s !== 'string') return ''
+        return s.charAt(0).toUpperCase() + s.slice(1)
+      }
+      
+
+    
     return (
       <React.Fragment>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>item</Paper>
+        <Grid item xs={4} className="pokemon-images-box">
+            
+          <Paper className="pokemon-images"><html><img src={finalString}></img></html> </Paper>
         </Grid>
         
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>item</Paper>
-          <Paper className={classes.paper}>item</Paper>
+        <Grid item xs={8} className="hp-and-health">
+          <div className="name"><Paper className={classes.paper}>{capitalize(props.name)}</Paper></div>
+          <div className="health"><Paper className={classes.paper}>Base Health: {props.baseHP}</Paper> </div>
         </Grid>
       </React.Fragment>
     );

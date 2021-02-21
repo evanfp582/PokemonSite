@@ -1,6 +1,9 @@
 import React from "react"
 import EmptyPokemonSlot from "./EmptyPokemonSlot"
 import PokemonSlot from "./PokemonSlot"
+import PokemonProfileBox from "./PokemonProfileBox"
+
+
 
 
 class FilledPokemonSlot extends React.Component{
@@ -16,7 +19,8 @@ class FilledPokemonSlot extends React.Component{
     render(){
         return(
         <div className="filled-pokemon-slot">
-            <ul><h1>{this.state.name}</h1></ul>
+            <PokemonProfileBox name={this.state.name} picture={this.state.data.sprites.front_default} baseHP={this.state.data.stats[1].base_stat} id={this.state.data.id}/>
+            {/* <ul><h1>{this.state.name}</h1></ul> */}
         </div>)
         }
     

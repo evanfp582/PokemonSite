@@ -26,8 +26,9 @@ class PokemonSlot extends React.Component{
     async emptyPokemonClick(){
         let answer= window.prompt("What is the Pokemon's name?","Fill in pokemon here")
         console.log(answer)
+        
         if ((answer !== "Fill in pokemon here") && (answer !== null)){
-            
+            answer=answer.toLowerCase();
             console.log(this.state)
             
             this.setState({pokemonName: answer})
@@ -49,9 +50,7 @@ class PokemonSlot extends React.Component{
         }
     }   
     
-    componentDidMount() {
-        
-    }
+   
     
 
     
